@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Models - Finance & Tech Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration for UNC Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carolina: '#7BAFD4', // Official UNC Light Blue
+                        darkbg: '#050505',   // Ultra-deep sleek black
+                        cardbg: '#111111',   // Subtle dark gray for cards
+                        bordercolor: '#222222', // Sleek borders for depth
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"EB Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .model-card {
+            transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .model-card:hover {
+            transform: translateY(-5px);
+            border-color: #7BAFD4; /* Carolina blue hover effect */
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-darkbg/90 backdrop-blur-md border-b border-bordercolor sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../main_page/index.html" class="flex-shrink-0 flex items-center">
+                        <span class="font-bold text-xl tracking-tight text-white">Nikhil Binoy<span class="text-carolina">.</span></span>
+                    </a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <!-- Links to separate pages (Financial Models is highlighted white here) -->
+                    <a href="../main_page/index.html" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="../projects/all_projects.html" class="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Financial Projects</a>
+                    <a href="../articles/all_posts.html" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Articles</a>
+                    <a href="https://www.linkedin.com/in/nikhil-binoy" target="_blank" class="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-bold transition-colors shadow-sm flex items-center">
+                        <i class="fab fa-linkedin mr-2 text-[1.1rem]"></i> LinkedIn
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-darkbg pt-16 pb-12 border-b border-bordercolor text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-serif italic text-white mb-4">Financial Models & Projects</h1>
+            <p class="text-gray-400 text-lg">Sanitized versions of my Excel models, case studies, and valuation practice.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Models Grid -->
+    <main class="flex-grow py-16 bg-darkbg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Model 1: DCF -->
+                <div class="bg-cardbg rounded-xl p-8 border border-bordercolor model-card flex flex-col h-full">
+                    <i class="fas fa-file-excel text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">DCF Model: [Company Name]</h3>
+                    <p class="text-gray-400 mb-6 text-sm flex-grow">A comprehensive 5-year Discounted Cash Flow model based on recent 10-K filings, including sensitivity analysis on WACC and Terminal Growth Rate.</p>
+                    <a href="#" class="inline-flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-white text-sm font-bold py-3 px-4 rounded transition-colors mt-auto w-full">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+                </div>
+
+                <!-- Model 2: 3-Statement -->
+                <div class="bg-cardbg rounded-xl p-8 border border-bordercolor model-card flex flex-col h-full">
+                    <i class="fas fa-file-excel text-4xl text-carolina mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">3-Statement Model: [Company Name]</h3>
+                    <p class="text-gray-400 mb-6 text-sm flex-grow">A fully linked three-statement projection model built from scratch, forecasting historical revenue drivers and margin expansions.</p>
+                    <div class="mt-auto text-center w-full">
+                        <span class="inline-block bg-black border border-gray-700 text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider w-full">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Model 3: Comps -->
+                <div class="bg-cardbg rounded-xl p-8 border border-bordercolor model-card flex flex-col h-full">
+                    <i class="fas fa-chart-pie text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Comps Analysis: Fintech Sector</h3>
+                    <p class="text-gray-400 mb-6 text-sm flex-grow">A Comparable Company Analysis (CCA) spreading metrics across 5 major publicly traded fintechs to determine relative valuation multiples like EV/EBITDA.</p>
+                    <div class="mt-auto text-center w-full">
+                        <span class="inline-block bg-black border border-gray-700 text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider w-full">Coming Soon</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Additional Context or GitHub link -->
+            <div class="mt-16 text-center border-t border-bordercolor pt-12">
+                <h3 class="text-2xl font-bold text-white mb-4">Why I share my models</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-6">
+                    I believe the best way to prove technical competence is to build in public. All models posted here are completely built from scratch without the use of pre-formatted templates. If you spot an error in my assumptions or mechanics, I'd love to hear your feedback!
+                </p>
+                <a href="https://www.linkedin.com/in/nikhil-binoy" target="_blank" class="text-carolina font-bold hover:underline inline-flex items-center">
+                    Message me with feedback <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-bordercolor text-gray-300 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Branding -->
+                <div>
+                    <span class="font-bold text-xl tracking-tight text-white mb-4 block">Nikhil Binoy<span class="text-carolina">.</span></span>
+                    <p class="text-gray-500 text-sm">A personal platform dedicated to learning corporate finance, investment banking, and the future of financial technology.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-carolina">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="../main_page/index.html" class="hover:text-white transition-colors">About Me</a></li>
+                        <li><a href="../articles/all_posts.html" class="hover:text-white transition-colors">Articles & Research</a></li>
+                        <li><a href="../projects/all_projects.html" class="hover:text-white transition-colors">Financial Models</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">View Resume</a></li>
+                    </ul>
+                </div>
+                <!-- Contact/Disclaimer -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-carolina">Connect</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Nikhil Binoy. Built for learning.</p>
+                <p class="mt-4 md:mt-0 text-center md:text-right max-w-lg">
+                    <strong>Disclaimer:</strong> The content on this website is for educational and informational purposes only. It is a documentation of a student's learning journey and does not constitute financial, investment, or professional advice.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
