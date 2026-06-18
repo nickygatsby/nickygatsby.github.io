@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 2: Valuations</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration for UNC Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carolina: '#7BAFD4', // Official UNC Light Blue
+                        darkbg: '#050505',   // Ultra-deep sleek black
+                        cardbg: '#111111',   // Subtle dark gray for cards
+                        bordercolor: '#222222', // Sleek borders for depth
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"EB Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar (EXACTLY the same as index.html) -->
+    <nav class="bg-darkbg/90 backdrop-blur-md border-b border-bordercolor sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="font-bold text-xl tracking-tight text-white">Nikhil Binoy<span class="text-carolina">.</span></span>
+                    </a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="../../index.html" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="../../projects/all_projects.html" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Financial Projects</a>
+                    <a href="../all_posts.html" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Articles</a>
+                    <a href="https://www.linkedin.com/in/nikhil-binoy" target="_blank" class="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-bold transition-colors shadow-sm flex items-center">
+                        <i class="fab fa-linkedin mr-2 text-[1.1rem]"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content Area -->
+    <main class="flex-grow py-16">
+        <!-- We use max-w-3xl here so the text doesn't stretch too wide (makes it easier to read) -->
+        <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Article Header -->
+            <header class="mb-10 border-b border-bordercolor pb-10">
+                <div class="flex items-center space-x-2 text-carolina text-sm font-bold uppercase tracking-wider mb-4">
+                    <span>Learning</span>
+                    <span class="text-gray-600">&bull;</span>
+                    <span class="text-gray-400">3 Min Read</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-serif italic text-white leading-tight mb-4">
+                    Joint Valuations
+                </h1>
+                <p class="text-gray-400">Published on June 3, 2026</p>
+            </header>
+
+            <!-- Article Body (THIS IS THE ONLY PART YOU CHANGE FOR NEW ARTICLES) -->
+            <div class="prose prose-invert prose-lg text-gray-300 space-y-6">
+                
+                <!-- subtitle-->
+                <p class="text-xl text-gray-200 leading-relaxed">  
+                    Moving from textbook DCFs to real-world modeling, and why a "joint valuation" brings the whole picture together.
+                </p>
+
+                <p>
+                    There is a big difference between reading about a Discounted Cash Flow (DCF) model in a textbook and using a live valuation model at a financial institution. 
+                    Recently, I had an opportunity to study an organization's master valuation model for a network of consumer lending branches. When you're staring at a spreadsheet of delinquency rates, pre-tax net income and fixed assets, it's initially overwhelming. 
+                    But as I worked through each formula and began to follow the logic behind each number, it started to make sense. What really clicked for me was that I had finally seen a true example of how the concept of "joint valuation" works.
+                    <br><br>I will be breaking down the conceptual mechanics of how a consumer lending branch gets valued, and illustrate the importance of viewing that valuation from multiple perspectives.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 border-l-4 border-carolina pl-4">The Engine of a Consumer Lender</h2>
+                <p>
+                    To truly understand the valuation, you have to understand the business model behind the lending side of a financial institution. 
+                    In contrast to a software company that sells subscription-based products, a consumer lender's "product" is money. 
+                    In essence, when valuing a consumer lending branch, you are placing a value on the branch's living and breathing portfolio of debt.
+                    <br><br>Looking at just one method or factor of valuation could be dangerous as you essentially ignore important data, leading to false numbers. 
+                    <br><br>In order to arrive at a final value for a business opportunity, the model of analysis that I was working on involved using a "Joint Valuation Approach" — meaning, the combination of the Asset Method and the Earnings Method in order to "triangulate" an accurate and defensible value. Here’s how all of the moving parts fit together conceptually:
+
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 border-l-4 border-carolina pl-4">1. Asset Method</h2>
+                <p>
+                    The second piece of this valuation method looks at the branch as a profit-generating entity moving forward.
+                    <br><br>Valuing the Portfolio: Because not all loans are alike, the model separates loans into "good" loans (the borrower is 30 days or less late on payments) and "bad" loans (the borrower is 90 days or more late on payments). 
+                    "Good" loans are valued a fair value premium (1.15x) and are depreciated or highly discounted as those borrowers are most likely to pay back. For those 60 days late or even 90 days late have extremely lower rates as they unlikely to pay their loans back, therefore, causing charge offs.
+                    <br><br>Net Asset Value: After determining the value of the loan portfolio based on the criteria previously mentioned, you then add the value of the branch’s cash and fixed assets and then subtract their total liabilities in order to arrive at the final Asset Value.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 border-l-4 border-carolina pl-4">2. Earnings Method</h2>
+                <p>
+                    The first half of the valuation process looks at the balance sheet. Assuming that the branch ceased making any new loans as of tomorrow and proceeded to only collect the money that was owed to them — what would the branch be worth?
+                    <br><br>While no longer considering only loans, this methodology now considers Trailing Twelve Months (TTM) Pre-Tax Net Income generated by the branch. After taking the actual earnings of the branch and applying a market multiple, you arrive at an estimate for what a buyer would pay to "own" the right to receive the future cash flow that the branch will generate.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 border-l-4 border-carolina pl-4">3. Blend- Joint Valuation</h2>
+                <p>
+                    Now that you have completed both Asset Valuation and Earnings Valuation, which amount is "right?"
+                    <br><br>Answer: both. By utilizing both methods equally, or 50/50, you have arrived at the "Hybrid" Value or the total picture of the Branch. The Hybrid Value contains both the factual, tangible value of the existing loan portfolio while accounting for the ability of the branch to continue operating and generating future income.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 border-l-4 border-carolina pl-4">Takeaway?</h2>
+                <p>
+                    What I learned about finance has led me to believe that being a math genius is not as important as knowing the business's story. Each part of the financial model represents an action that can be expressed by measuring the world: changes made with interest rates, marketing dollars spent and timing of consumers' payments received.
+                    <br><br>Understanding how the "joint valuation" of all these previously separate operational stories can be combined into one number is both rewarding and enlightening because of the way these stories are combined into one piece in the finance world.
+                </p>
+
+            </div>
+            
+            <!-- Back Button -->
+            <div class="mt-16 pt-8 border-t border-bordercolor">
+                <a href="../all_posts.html" class="text-carolina hover:text-white font-semibold transition-colors flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to all articles
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer (EXACTLY the same as index.html) -->
+    <footer class="bg-black border-t border-bordercolor text-gray-300 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 Nikhil Binoy. Built for learning.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
